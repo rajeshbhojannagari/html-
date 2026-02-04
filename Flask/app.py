@@ -14,14 +14,19 @@ def login():
             return Response('Invalid credentials',401)
     return '''
         <form method="POST">
-            Username: <input name="username"><br>
-            Password: <input name="password" type="password"><br>
+            Username: <input name="username" required><br>
+            Password: <input name="password" type="password" required><br>
             <input type="submit">
         </form>'''
 @app.route('/welcome')
 def Welcome():
     if 'user' in session:
         return f"Welcome {session['user']}"
+    '''<a href={url_for('logout')}></a>'''
+    return redirect(url_for('login'))
+@app.route('/logout')
+def logout():
+    session.pop('user',None)
     return redirect(url_for('login'))
 if __name__=="__main__":
     app.run(debug=True)
