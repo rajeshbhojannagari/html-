@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>College Registation System</h1>
+    <a href="/">Register</a>
+    <a href="http://127.0.0.1:5000/students">Student</a>
+    <hr>
+    <h2>Student Registation</h2>
+
+    <form method="POST" action="/">
+        <label>Name: </label>
+        <input type="text" name="name" placeholder="Enter your name" required><br><br>
+
+        <label>Email: </label>
+        <input type="email" name="email" placeholder="Enter your email addresss" required><br><br>
+
+        <label>Course: </label><br>
+        <select name="course">
+            <option>--Select--</option>
+            <option value="Engineering">Engineering</option>
+            <option value="Mechanics">Mechanics</option>
+            <option value="Civil">Civil</option>
+        </select><br>
+        <input type="submit" value="Register">
+    </form>
+</body>
+</html>
